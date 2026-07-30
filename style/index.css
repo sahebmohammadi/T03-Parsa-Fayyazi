@@ -1,0 +1,597 @@
+*, *::before, *::after {
+	box-sizing: var(--box-s);
+	list-style: var(--res);
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+/**/
+:root {
+	--jus-c-s: space-between;
+	--color-10: #eee81140;
+	--color-1: #ebebebeb;
+	--color-5: #e5303f1a;
+	--color-8: #e7e7e700;
+	--color-9: #14141466;
+	--jus-c-fs: flex-start;
+	--hei-fc: fit-content;
+	--color-2: #f7f7f7;
+	--color-3: #cc312d;
+	--color-4: #e5303f;
+	--color-7: #e6e6e6;
+	--box-s: border-box;
+	--jus-al-c: center;
+	--color-6: #fff;
+	--jus-s: flex-end;
+	--fl-di-c: column;
+	--re-ov: ellipsis;
+	--cur-p: pointer;
+	--po-r: relative;
+	--po-a: absolute;
+	--wi-sp: nowrap;
+	--font-w: bold;
+	--fl-di-r: row;
+	--dis-f: flex;
+	--bor: solid;
+	--ov: hidden;
+	--res: none;
+}
+/**/
+@font-face {
+	src: url(/font/Estedad.woff2);
+	font-family: Estedad;
+}
+/**/
+html {font-size: 62.5%;}
+/**/
+body {
+	padding: 24px 34px 24px 34px;
+	height: 100vh;
+}
+/**/
+body, button, input, select, textarea {font-family: Estedad;}
+/**/
+#contaiter {
+	border: 1px var(--bor) var(--color-1);
+	display: var(--dis-f);
+	height: var(--hei-fc);
+	border-radius: 20px;
+	padding: 20px 15px;
+	width: 100%;
+	gap: 15px;
+}
+/**/
+#user-information {
+	position: var(--po-r);
+	width: 70%;	
+}
+/**/
+#title-user-information span {
+	display: var(--dis-f);
+	font-size: 1.5rem;
+	gap: 5px;
+}
+/**/
+#title-user-information h4 {
+	position: var(--po-r);
+	bottom: 2px;
+}
+#send {
+	position: var(--po-a);
+	margin-bottom: 15px;
+	width: 99%;
+	left: 0;
+}
+/**/
+#title-delivery-recipient-information {
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+}
+/**/
+#delivery-recipient-information {
+	display: var(--dis-f);
+	margin-bottom: 20px;
+	gap: 10px;
+}
+/**/
+#caller-number, #name-and-surname {
+	width: 50%;
+}
+/**/
+#caller-number h5, #name-and-surname h5, #province h5, #city h5 {
+	font-weight: 500;
+	font-size: 1rem;
+}
+/**/
+#caller-number input, #name-and-surname input, #province select, #city select, #license-plate input, #postal-code input {
+	background-color: var(--color-2);
+	border-radius: 40px;
+	font-weight: 600;
+	margin-top: 5px;
+	font-size: 1rem;
+	padding: 10px;
+	width: 100%;
+	outline: 0;
+	border: 0;
+}
+/**/
+#province select, #city select {
+	appearance: var(--res);
+	cursor: var(--cur-p);
+	
+}
+/**/
+#delivery-address {
+	margin-bottom: 10px;
+}
+/**/
+#title-delivery-address {
+	display: var(--dis-f);
+	justify-content: var(--jus-c-s);
+	margin-bottom: 10px;
+}
+/**/
+#title-delivery-address h4 {
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+/**/
+#title-delivery-address span {
+	display: var(--dis-f);
+	align-items: var(--jus-al-c);
+	color: var(--color-3);
+	font-size: 1.1rem;
+	font-weight: 600;
+	gap: 5px;
+}
+/**/
+#title-delivery-address span svg {
+	height: 10px;
+	width: 10px;
+}
+/**/
+#area {
+	display: var(--dis-f);
+	gap: 10px;
+}
+#province, #city {
+	position: var(--po-r);
+	width: 50%;
+}
+/**/
+#province svg, #city svg {
+	position: var(--po-a);
+	left: 10px;
+	top: 33px;
+}
+/**/
+#building-code {
+	display: var(--dis-f);
+	margin-top: 10px;
+	gap: 10px;
+}
+/**/
+#license-plate, #postal-code {
+	width: 50%;
+}
+/**/
+#license-plate h5, #postal-code h5 {
+	font-weight: 500;
+	font-size: 1rem;
+}
+/**/
+#postal-address h5 {
+	margin-bottom: 5px;
+	font-weight: 500;
+	font-size: 1rem;
+}
+/**/
+#postal-address textarea {
+	background-color: var(--color-2);
+	border-radius: 12px;
+	resize: var(--res);
+	font-weight: 600;
+	font-size: 1rem;
+	height: 100px;
+	padding: 16px;
+	width: 100%;
+	border: 0;
+}
+/**/
+#how-to-send {
+	position: var(--po-a);
+	height: 125px;
+	bottom: 80px;
+	width: 100%;
+}
+/**/
+#how-to-send .line {
+	justify-self: var(--jus-s);
+	position: var(--po-r);
+	width: 99%;
+	top: 10px;
+}
+/**/
+#title-how-to-send {
+	position: var(--po-r);
+	right: 5px;
+	top: 5px;
+}
+/**/
+#title-how-to-send span {
+	display: var(--dis-f);
+	font-size: 1.5rem;
+	gap: 5px;
+}
+/**/
+#shopping-cart-status {
+	display: var(--dis-f);
+	justify-content: var(--jus-al-c);
+	background-color: var(--color-5);
+	align-items: var(--jus-al-c);
+	position: var(--po-a);
+	color: var(--color-4);
+	border-radius: 32px;
+	font-size: 1.2rem;
+	width: 170px;
+	height: 40px;
+	left: 0;
+	top: 0;
+}
+/**/
+#option {
+	display: var(--dis-f);
+	position: var(--po-a);
+	height: 50px;
+	width: 99%;
+	bottom: 0;
+	gap: 10px;
+}
+/**/
+#tipax, #vanguard {
+	background-color: var(--color-2);
+	position: var(--po-r);
+	display: var(--dis-f);
+	border-radius: 40px;
+	padding: 15px;
+	width: 50%;
+}
+/**/
+#tipax:hover, #vanguard:hover {
+	outline: 1px var(--bor) var(--color-3);
+	background-color: var(--color-6);
+}
+/**/
+#tipax input, #vanguard input {
+	accent-color: var(--color-3);
+	cursor: var(--cur-p);
+}
+/**/
+#tipax h4, #vanguard h4 {
+	margin-right: 5px;
+}
+/**/
+#tipax span, #vanguard span {
+	position: var(--po-a);
+	display: var(--dis-f);
+	left: 15px;
+	gap: 5px;
+}
+/**/
+#tipax span h4, #vanguard span h4 {
+	margin-bottom: 5px;
+	font-size: 1.15rem;
+}
+/**/
+#purchase-information {
+	position: var(--po-r);
+	background-color: var(--color-2);
+	border-radius: 16px;
+	padding: 20px;
+	height: 100%;
+	width: 30%;
+}
+/**/
+#title-purchase-information span {
+	display: var(--dis-f);
+	font-size: 1.5rem;
+	gap: 5px;
+}
+/**/
+.line {
+	background-color: var(--color-7);
+	margin: 10px 0 10px 0;
+	width: 100%;
+	height: 1px;
+}
+/**/
+.products {
+	display: var(--dis-f);
+	height: var(--hei-fc);
+	width: 100%;
+	gap: 10px;
+}
+/**/
+.image-product {
+	display: var(--dis-f);
+	background-color: var(--color-6);
+	justify-content: var(--jus-al-c);
+	align-items: var(--jus-al-c);
+	border-radius: 12px;
+	padding: 10px;
+	height: 100px;
+	width: 100px;
+}
+/**/
+.product-information {
+	display: var(--dis-f);
+	justify-content: var(--jus-c-s);
+	flex-direction: var(--fl-di-c);
+	width: 70%;
+}
+/**/
+.about-product {
+	display: var(--dis-f);
+	justify-content: var(--jus-c-s);
+}
+/**/
+.about-product h4:nth-child(1) {
+	font-weight: 600;
+	width: 110px;
+}
+/**/
+.about-product h4:nth-child(2) {
+	font-weight: 400;
+}
+/**/
+.about-product h4:nth-child(2) span {
+	font-weight: var(--font-w);
+	font-size: 1.1rem;
+}
+/**/
+.number-products {
+	display: var(--dis-f);
+	justify-content: var(--jus-c-s);
+	align-items: var(--jus-al-c);
+}
+/**/
+.uncollected-price {
+	display: var(--dis-f);
+}
+/**/
+.uncollected-price h4:nth-child(1) {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+/**/
+.uncollected-price h4:nth-child(2) {
+	margin: 1px 5px 0 0;
+	font-weight: 400;
+}
+/**/
+.number {
+	display: var(--dis-f);
+	gap: 5px;
+}
+/**/
+.number .number-child {
+	display: var(--dis-f);
+	background-color: var(--color-6);
+	justify-content: var(--jus-al-c);
+	align-items: var(--jus-al-c);
+	border-radius: 100%;
+	height: 30px;
+	padding: 8px;
+	width: 30px;
+}
+/**/
+.number button {
+	cursor: var(--cur-p);
+	border: 0;
+}
+/**/
+.number div {
+	background-color: var(--color-8) !important;
+	border: 1px var(--bor) var(--color-7);
+	font-size: 1rem;
+}
+/**/
+#price {
+	padding-bottom: calc(12px - 10px);
+	background-color: var(--color-6);
+	padding-top: calc(12px - 10px);
+	height: var(--hei-fc);
+	margin: 10px 0 10px 0;
+	padding-right: 10px;
+	border-radius: 12px;
+	padding-left: 10px;
+	width: 100%;
+}
+/**/
+.original-price {
+	display: var(--dis-f);
+	justify-content: var(--jus-c-s);
+	margin: 12px 0 12px 0;
+}
+/**/
+.title-price {
+	font-weight: 600;
+}
+/**/
+.price-in-toman {
+	display: var(--dis-f);
+	gap: 10px;
+}
+/**/
+.less-visible-information {
+	color: var(--color-9);
+}
+/**/
+#amount-payable {
+	font-weight: var(--font-w);
+	position: var(--po-r);
+	font-size: 1.2rem;
+	bottom: 1%;
+}
+/**/
+#advertisement {
+	display: var(--dis-f);
+	background-color: var(--color-6);
+	justify-content: var(--jus-c-fs);
+	align-items: var(--jus-al-c);
+	padding: 0 10px 0 0;
+	border-radius: 12px;
+	margin: 0 0 10px 0;
+	height: 65px;
+	width: 100%;
+	gap: 5px;
+}
+/**/
+#zibal-background {
+	background-color: var(--color-10);
+	display: var(--dis-f);
+	justify-content: var(--jus-al-c);
+	align-items: var(--jus-al-c);
+	border-radius: 10px;
+	height: 40px;
+	width: 40px;
+}
+/**/
+#zibal-background svg {
+	height: 25px;
+	width: 25px;
+}
+/**/
+#advertisement h5 {
+	font-weight: 500;
+	font-size: .9rem;
+}
+/**/
+#payment {
+	display: var(--dis-f);
+	justify-content: var(--jus-al-c);
+	align-items: var(--jus-al-c);
+	height: 48px;
+	width: 100%;
+}
+/**/
+#payment button {
+	background-color: var(--color-3);
+	color: var(--color-6);
+	cursor: var(--cur-p);
+	border-radius: 44px;
+	height: 40px;
+	width: 100%;
+	border: 0;
+}
+/**/
+#div-regulator {
+	height: 24px;
+	width: 100%;
+}
+/**/
+@media screen and (max-width: 1200px) {
+	.number-products {
+		flex-direction: var(--fl-di-c);
+	}
+}
+/**/
+@media screen and (max-width: 1140px) {
+	#advertisement h5 {
+		font-weight: 600;
+		width: 60%;
+	}
+}
+/**/
+@media screen and (max-width: 1060px) {
+	.about-product h4:nth-child(2) {
+		display: var(--res);
+	}
+}
+/**/
+@media screen and (max-width: 990px) {
+	#payment button {
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+}
+/**/
+@media screen and (max-width: 900px) {
+	.image-product {
+		height: 80px;
+	}
+	/**/
+	.about-product h4:nth-child(1) {
+		margin-bottom: 5px;
+	}
+}
+/**/
+@media screen and (max-width: 880px) {
+	#advertisement {
+		display: var(--res);
+	}
+	/**/
+	#how-to-send {
+		bottom: 0;
+	}
+}
+/**/
+@media screen and (max-width: 860px) {
+	.total, #price .line, .image-product, .uncollected-price, #title-how-to-send, #shopping-cart-status {
+		display: var(--res);
+	}
+	/**/
+	#postal-address textarea {
+		height: 50px;
+	}
+	/**/
+	.number-products {
+		flex-direction: var(--fl-di-r);
+	}
+	#how-to-send .line {
+		margin-top: 45px;
+	}
+}
+/**/
+@media screen and (max-width: 830px) {
+	#purchase-information {
+		display: var(--res);
+	}
+	/**/
+	#user-information {
+		height: 490px;
+		width: 100%;
+	}
+}
+/**/
+@media screen and (max-width: 600px) {
+	#option {
+		flex-direction: var(--fl-di-c);
+		bottom: 50px;
+	}
+	/**/
+	#tipax {
+		width: 100%;
+	}
+	/**/
+	#vanguard {
+		width: 100%;
+	}
+	/**/
+	#user-information {
+		height: 530px;
+	}
+	/**/
+	#how-to-send .line {
+		margin-top: 0;
+	}
+}
+/**/
+@media screen and (max-width: 400px) {
+	#postal-address textarea {
+		text-overflow: var(--re-ov);
+		white-space: var(--wi-sp);
+		overflow: var(--ov);
+	}
+}
+/**/
