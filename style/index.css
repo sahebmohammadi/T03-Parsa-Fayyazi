@@ -6,6 +6,12 @@
 	margin: 0;
 }
 /**/
+:focus-visible {
+	outline: 2px solid var(--color-3);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+/**/
 :root {
 	--jus-c-s: space-between;
 	--color-10: #eee81140;
@@ -59,11 +65,13 @@ body, button, input, select, textarea {font-family: Estedad;}
 	padding: 20px 15px;
 	width: 100%;
 	gap: 15px;
+	min-width: 0;
 }
 /**/
 #user-information {
 	position: var(--po-r);
-	width: 70%;	
+	width: 70%;
+	min-width: 0;
 }
 /**/
 #title-user-information span {
@@ -98,9 +106,10 @@ body, button, input, select, textarea {font-family: Estedad;}
 	width: 50%;
 }
 /**/
-#caller-number h5, #name-and-surname h5, #province h5, #city h5 {
+#caller-number label, #name-and-surname label, #province label, #city label {
 	font-weight: 500;
 	font-size: 1rem;
+	display: block;
 }
 /**/
 #caller-number input, #name-and-surname input, #province select, #city select, #license-plate input, #postal-code input {
@@ -175,15 +184,17 @@ body, button, input, select, textarea {font-family: Estedad;}
 	width: 50%;
 }
 /**/
-#license-plate h5, #postal-code h5 {
+#license-plate label, #postal-code label {
 	font-weight: 500;
 	font-size: 1rem;
+	display: block;
 }
 /**/
-#postal-address h5 {
+#postal-address label {
 	margin-bottom: 5px;
 	font-weight: 500;
 	font-size: 1rem;
+	display: block;
 }
 /**/
 #postal-address textarea {
@@ -257,7 +268,8 @@ body, button, input, select, textarea {font-family: Estedad;}
 	width: 50%;
 }
 /**/
-#tipax:hover, #vanguard:hover {
+#tipax:hover, #vanguard:hover,
+#tipax:has(input:checked), #vanguard:has(input:checked) {
 	outline: 1px var(--bor) var(--color-3);
 	background-color: var(--color-6);
 }
@@ -290,6 +302,7 @@ body, button, input, select, textarea {font-family: Estedad;}
 	padding: 20px;
 	height: 100%;
 	width: 30%;
+	min-width: 0;
 }
 /**/
 #title-purchase-information span {
@@ -310,6 +323,7 @@ body, button, input, select, textarea {font-family: Estedad;}
 	height: var(--hei-fc);
 	width: 100%;
 	gap: 10px;
+	min-width: 0;
 }
 /**/
 .image-product {
@@ -328,6 +342,7 @@ body, button, input, select, textarea {font-family: Estedad;}
 	justify-content: var(--jus-c-s);
 	flex-direction: var(--fl-di-c);
 	width: 70%;
+	min-width: 0;
 }
 /**/
 .about-product {
@@ -527,20 +542,12 @@ body, button, input, select, textarea {font-family: Estedad;}
 }
 /**/
 @media screen and (max-width: 880px) {
-	#advertisement {
-		display: var(--res);
-	}
-	/**/
 	#how-to-send {
 		bottom: 0;
 	}
 }
 /**/
 @media screen and (max-width: 860px) {
-	.total, #price .line, .image-product, .uncollected-price, #title-how-to-send, #shopping-cart-status {
-		display: var(--res);
-	}
-	/**/
 	#postal-address textarea {
 		height: 50px;
 	}
@@ -554,8 +561,12 @@ body, button, input, select, textarea {font-family: Estedad;}
 }
 /**/
 @media screen and (max-width: 830px) {
+	#contaiter {
+		flex-direction: var(--fl-di-c);
+	}
+	/**/
 	#purchase-information {
-		display: var(--res);
+		width: 100%;
 	}
 	/**/
 	#user-information {

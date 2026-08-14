@@ -9,8 +9,20 @@
 </head>
 <body>
 	<!-- ۰۱۲۳۴۵۶۷۸۹ -->
-	<div id="contaiter">
-		<div id="user-information">
+	<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+		<defs>
+			<symbol id="ic-plus" viewBox="0 0 16 16">
+				<path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</symbol>
+			<symbol id="ic-trash" viewBox="0 0 18 18">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M8.54182 0C7.16619 0 5.93149 0.901026 5.53369 2.22704L5.51645 2.28449C4.19809 2.43154 2.88783 2.675 1.59627 3.01488L0.466095 3.3123C0.132282 3.40014 -0.0671137 3.74197 0.0207317 4.07578C0.108577 4.40959 0.450399 4.60899 0.784212 4.52114L1.91439 4.22373C6.25872 3.08048 10.8249 3.08048 15.1692 4.22373L16.2994 4.52114C16.6332 4.60899 16.9751 4.40959 17.0629 4.07578C17.1508 3.74197 16.9514 3.40014 16.6175 3.3123L15.4874 3.01488C14.1958 2.675 12.8855 2.43154 11.5672 2.28449L11.55 2.22704C11.1521 0.901026 9.91745 0 8.54182 0ZM10.1658 2.16465C9.83074 1.60903 9.21601 1.25 8.54182 1.25C7.86763 1.25 7.2529 1.60903 6.91783 2.16465C7.99952 2.10017 9.08412 2.10017 10.1658 2.16465Z" fill="#CC312D"/>
+				<path d="M1.79744 4.96335C2.13994 4.92043 2.45238 5.16328 2.4953 5.50578L3.60986 14.4C3.72741 15.338 4.52493 16.0418 5.47031 16.0418H11.6133C12.5587 16.0418 13.3562 15.338 13.4738 14.4L14.5883 5.50578C14.6313 5.16328 14.9437 4.92043 15.2862 4.96335C15.6287 5.00627 15.8716 5.31871 15.8286 5.66121L14.7141 14.5554C14.5182 16.1188 13.189 17.2918 11.6133 17.2918H5.47031C3.89467 17.2918 2.56548 16.1188 2.36956 14.5554L1.255 5.66121C1.21208 5.31871 1.45494 5.00627 1.79744 4.96335Z" fill="#CC312D"/>
+			</symbol>
+		</defs>
+	</svg>
+	<main id="contaiter">
+		<section id="user-information">
 			<div id="title-user-information">
 				<span><h4>اطلاعات کاربری</h4>شما</span>
 			</div>
@@ -22,15 +34,15 @@
 				<!---->
 				<div id="delivery-recipient-information">
 					<div id="caller-number">
-						<h5>نام و نام خانوادگی</h5>
+						<label for="fld-name">نام و نام خانوادگی</label>
 						<!---->
-						<input type="text" placeholder="رضا جنیدی">
+						<input id="fld-name" type="text" placeholder="رضا جنیدی">
 					</div>
 					<!---->
 					<div id="name-and-surname">
-						<h5>شماره تماس گیرنده</h5>
+						<label for="fld-phone">شماره تماس گیرنده</label>
 						<!---->
-						<input type="text" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+						<input id="fld-phone" type="text" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
 					</div>
 				</div>
 				<!---->
@@ -43,9 +55,9 @@
 					<!---->
 					<div id="area">
 						<div id="province">
-							<h5>استان</h5>
+							<label for="fld-province">استان</label>
 							<!---->
-							<select>
+							<select id="fld-province">
 								<option>تهران</option>
 								<option>البرز</option>
 							</select>
@@ -54,9 +66,9 @@
 						</div>
 						<!---->
 						<div id="city">
-							<h5>شهر</h5>
+							<label for="fld-city">شهر</label>
 							<!---->
-							 <select>
+							 <select id="fld-city">
 								<option>آبعلی</option>
 								<option>کرج</option>
 							</select>
@@ -67,23 +79,23 @@
 					<!---->
 					<div id="building-code">
 						<div id="license-plate">
-							<h5>پلاک</h5>
+							<label for="fld-plaque">پلاک</label>
 							<!---->
-							<input type="text" placeholder="۱۰">
+							<input id="fld-plaque" type="text" placeholder="۱۰">
 						</div>
 						<!---->
 						<div id="postal-code">
-							<h5>کد پستی</h5>
+							<label for="fld-postal">کد پستی</label>
 							<!---->
-							<input type="text" placeholder="۳۲۱۲۵۶۳۷۴۹۰">
+							<input id="fld-postal" type="text" placeholder="۳۲۱۲۵۶۳۷۴۹۰">
 						</div>
 					</div>
 				</div>
 				<!---->
 				<div id="postal-address">
-					<h5>نشانی پستی</h5>
+					<label for="fld-address">نشانی پستی</label>
 					<!---->
-					<textarea placeholder="تهران، خیابان ولیعصر، منطقه ۱۲، بلوار کاوه، کوچه ابوذر، پلاک ۱۵"></textarea>
+					<textarea id="fld-address" placeholder="تهران، خیابان ولیعصر، منطقه ۱۲، بلوار کاوه، کوچه ابوذر، پلاک ۱۵"></textarea>
 				</div>
 			</div>
 			<!---->
@@ -99,26 +111,26 @@
 				<div class="line"></div>
 				<!---->
 				<div id="option">
-					<div id="tipax">
-						<input type="checkbox">
+					<label id="tipax">
+						<input type="radio" name="ship" checked hidden>
 						<!---->
 						<h4>تیپاکس با بیمه (۱ تا ۳ روز کاری)</h4>
 						<!---->
 						<span><h4>۴۵،۰۰۰</h4>تومان</span>
-					</div>
+					</label>
 					<!---->
-					<div id="vanguard">
-						<input type="checkbox">
+					<label id="vanguard">
+						<input type="radio" name="ship" hidden>
 						<!---->
 						<h4>پست پیشتاز (۲ تا ۵روز کاری)</h4>
 						<!---->
 						<span><h4>۸۰،۰۰۰</h4>تومان</span>
-					</div>
+					</label>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!---->
-		<div id="purchase-information">
+		<aside id="purchase-information">
 			<div id="title-purchase-information">
 				<span><h4>اطلاعات</h4>خرید</span>
 			</div>
@@ -148,13 +160,13 @@
 						<!---->
 						<div class="number">
 							<button class="number-child">
-								<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								<svg viewBox="0 0 16 16"><use xlink:href="#ic-plus"/></svg>
 							</button>
 							<!---->
 							<div class="number-child">1</div>
 							<!---->
 							<button class="number-child">
-								<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.54182 0C7.16619 0 5.93149 0.901026 5.53369 2.22704L5.51645 2.28449C4.19809 2.43154 2.88783 2.675 1.59627 3.01488L0.466095 3.3123C0.132282 3.40014 -0.0671137 3.74197 0.0207317 4.07578C0.108577 4.40959 0.450399 4.60899 0.784212 4.52114L1.91439 4.22373C6.25872 3.08048 10.8249 3.08048 15.1692 4.22373L16.2994 4.52114C16.6332 4.60899 16.9751 4.40959 17.0629 4.07578C17.1508 3.74197 16.9514 3.40014 16.6175 3.3123L15.4874 3.01488C14.1958 2.675 12.8855 2.43154 11.5672 2.28449L11.55 2.22704C11.1521 0.901026 9.91745 0 8.54182 0ZM10.1658 2.16465C9.83074 1.60903 9.21601 1.25 8.54182 1.25C7.86763 1.25 7.2529 1.60903 6.91783 2.16465C7.99952 2.10017 9.08412 2.10017 10.1658 2.16465Z" fill="#CC312D"/><path d="M1.79744 4.96335C2.13994 4.92043 2.45238 5.16328 2.4953 5.50578L3.60986 14.4C3.72741 15.338 4.52493 16.0418 5.47031 16.0418H11.6133C12.5587 16.0418 13.3562 15.338 13.4738 14.4L14.5883 5.50578C14.6313 5.16328 14.9437 4.92043 15.2862 4.96335C15.6287 5.00627 15.8716 5.31871 15.8286 5.66121L14.7141 14.5554C14.5182 16.1188 13.189 17.2918 11.6133 17.2918H5.47031C3.89467 17.2918 2.56548 16.1188 2.36956 14.5554L1.255 5.66121C1.21208 5.31871 1.45494 5.00627 1.79744 4.96335Z" fill="#CC312D"/></svg>
+								<svg viewBox="0 0 18 18"><use xlink:href="#ic-trash"/></svg>
 							</button>
 						</div>
 					</div>
@@ -186,13 +198,13 @@
 						<!---->
 						<div class="number">
 							<button class="number-child">
-								<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								<svg viewBox="0 0 16 16"><use xlink:href="#ic-plus"/></svg>
 							</button>
 							<!---->
 							<div class="number-child">1</div>
 							<!---->
 							<button class="number-child">
-								<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.54182 0C7.16619 0 5.93149 0.901026 5.53369 2.22704L5.51645 2.28449C4.19809 2.43154 2.88783 2.675 1.59627 3.01488L0.466095 3.3123C0.132282 3.40014 -0.0671137 3.74197 0.0207317 4.07578C0.108577 4.40959 0.450399 4.60899 0.784212 4.52114L1.91439 4.22373C6.25872 3.08048 10.8249 3.08048 15.1692 4.22373L16.2994 4.52114C16.6332 4.60899 16.9751 4.40959 17.0629 4.07578C17.1508 3.74197 16.9514 3.40014 16.6175 3.3123L15.4874 3.01488C14.1958 2.675 12.8855 2.43154 11.5672 2.28449L11.55 2.22704C11.1521 0.901026 9.91745 0 8.54182 0ZM10.1658 2.16465C9.83074 1.60903 9.21601 1.25 8.54182 1.25C7.86763 1.25 7.2529 1.60903 6.91783 2.16465C7.99952 2.10017 9.08412 2.10017 10.1658 2.16465Z" fill="#CC312D"/><path d="M1.79744 4.96335C2.13994 4.92043 2.45238 5.16328 2.4953 5.50578L3.60986 14.4C3.72741 15.338 4.52493 16.0418 5.47031 16.0418H11.6133C12.5587 16.0418 13.3562 15.338 13.4738 14.4L14.5883 5.50578C14.6313 5.16328 14.9437 4.92043 15.2862 4.96335C15.6287 5.00627 15.8716 5.31871 15.8286 5.66121L14.7141 14.5554C14.5182 16.1188 13.189 17.2918 11.6133 17.2918H5.47031C3.89467 17.2918 2.56548 16.1188 2.36956 14.5554L1.255 5.66121C1.21208 5.31871 1.45494 5.00627 1.79744 4.96335Z" fill="#CC312D"/></svg>
+								<svg viewBox="0 0 18 18"><use xlink:href="#ic-trash"/></svg>
 							</button>
 						</div>
 					</div>
@@ -224,13 +236,13 @@
 						<!---->
 						<div class="number">
 							<button class="number-child">
-								<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="#1A1814" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8H8M8 8H12M8 8V12M8 8V4" stroke="black" stroke-opacity="0.2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								<svg viewBox="0 0 16 16"><use xlink:href="#ic-plus"/></svg>
 							</button>
 							<!---->
 							<div class="number-child">1</div>
 							<!---->
 							<button class="number-child">
-								<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.54182 0C7.16619 0 5.93149 0.901026 5.53369 2.22704L5.51645 2.28449C4.19809 2.43154 2.88783 2.675 1.59627 3.01488L0.466095 3.3123C0.132282 3.40014 -0.0671137 3.74197 0.0207317 4.07578C0.108577 4.40959 0.450399 4.60899 0.784212 4.52114L1.91439 4.22373C6.25872 3.08048 10.8249 3.08048 15.1692 4.22373L16.2994 4.52114C16.6332 4.60899 16.9751 4.40959 17.0629 4.07578C17.1508 3.74197 16.9514 3.40014 16.6175 3.3123L15.4874 3.01488C14.1958 2.675 12.8855 2.43154 11.5672 2.28449L11.55 2.22704C11.1521 0.901026 9.91745 0 8.54182 0ZM10.1658 2.16465C9.83074 1.60903 9.21601 1.25 8.54182 1.25C7.86763 1.25 7.2529 1.60903 6.91783 2.16465C7.99952 2.10017 9.08412 2.10017 10.1658 2.16465Z" fill="#CC312D"/><path d="M1.79744 4.96335C2.13994 4.92043 2.45238 5.16328 2.4953 5.50578L3.60986 14.4C3.72741 15.338 4.52493 16.0418 5.47031 16.0418H11.6133C12.5587 16.0418 13.3562 15.338 13.4738 14.4L14.5883 5.50578C14.6313 5.16328 14.9437 4.92043 15.2862 4.96335C15.6287 5.00627 15.8716 5.31871 15.8286 5.66121L14.7141 14.5554C14.5182 16.1188 13.189 17.2918 11.6133 17.2918H5.47031C3.89467 17.2918 2.56548 16.1188 2.36956 14.5554L1.255 5.66121C1.21208 5.31871 1.45494 5.00627 1.79744 4.96335Z" fill="#CC312D"/></svg>
+								<svg viewBox="0 0 18 18"><use xlink:href="#ic-trash"/></svg>
 							</button>
 						</div>
 					</div>
@@ -282,8 +294,8 @@
 			<div id="payment">
 				<button>پرداخت و خرید محصول</button>
 			</div>
-		</div>
-	</div>
+		</aside>
+	</main>
 	<!---->
 	<div id="div-regulator"></div>
 </body>
